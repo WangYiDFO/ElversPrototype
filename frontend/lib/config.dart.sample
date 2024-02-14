@@ -1,0 +1,14 @@
+const String keycloak_url = 'http://localhost:8379'; // your keycloak server url
+const String keycloak_realmId = 'test_realm'; // your realm id
+const String keycloak_clientId = 'test-demo'; // your client id. 
+
+// this sample use Authentication Code Flow with PKCS enabled. 
+// Please turn off Client authentication
+// Enable PKCS. Setting S256 to Proof Key for Code Exchange Code Challenge Method 
+const String keycloak_flowType = 'standard';
+const String keycloak_pkceMethod = 'S256';
+
+// this sample, call 3 APIs. one public access, one logged in user access, and one with logged in + Realm Role access
+const String backend_API_public = 'http://localhost:3000/public';
+const String backend_API_regular_user = 'http://localhost:3000/regular';
+const String backend_API_user_with_realm_role = 'http://localhost:3000/actorrole';

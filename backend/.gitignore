@@ -1,0 +1,28 @@
+# Dependency directories
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Environment variables
+.env
+keycloak.json
+
+# IDE files
+.vscode/
+.idea/
+
+# Build output
+dist/
+coverage/
+
+# Logs
+logs/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Optional: Uncomment the following lines if you use TypeScript
+# Compiled TypeScript files
+# *.js
+# *.js.map

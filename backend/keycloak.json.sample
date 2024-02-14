@@ -1,0 +1,7 @@
+{
+  "realm": "your_realm_id",
+  "bearer-only": true,
+  "auth-server-url": "keylocak_server_url",
+  "ssl-required": "external",
+  "resource": "your_client_id"
+}
