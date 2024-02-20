@@ -60,6 +60,13 @@ class _MyHomePageState extends State<MyHomePage> {
     ));
   }
 
+  void _updatePassword() {
+    keycloakService.login(KeycloakLoginOptions(
+      redirectUri: '${window.location.origin}',
+      action: 'UPDATE_PASSWORD',
+    ));
+  }
+
   void _callAPI(String url)  {
     http.get(
       Uri.parse(url),
@@ -160,6 +167,17 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: _login,
                 child: Text(
                   'Login',
+                  style: Theme.of(context).textTheme.headlineMedium,
+                ),
+              ),
+            SizedBox(
+              height: 20,
+            ),
+            if (_keycloakProfile?.username != null)
+              ElevatedButton(
+                onPressed: _updatePassword,
+                child: Text(
+                  'Change Password',
                   style: Theme.of(context).textTheme.headlineMedium,
                 ),
               ),
